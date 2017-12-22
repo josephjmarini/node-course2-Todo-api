@@ -34,20 +34,20 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err,db) => {
     //
     // });
 
-    // Insert new doc into Users (name, age, location
-    // db.collection("Users").insertOne({
-    //     name: 'maria',
-    //     age: 32,
-    //     location: 'NH'
-    // }, (err, result) => {
-    //
-    //     if (err) {
-    //         return console.log('Can not insert todo', err);
-    //     }
-    //
-    //      console.log(JSON.stringify(result.ops[0]._id, undefined
-    //          , 2));
-    // });
+    //Insert new doc into Users (name, age, location
+    db.collection("Users").insertOne({
+        name: 'maria',
+        age: 32,
+        location: 'NH'
+    }, (err, result) => {
+
+        if (err) {
+            return console.log('Can not insert todo', err);
+        }
+
+         console.log(JSON.stringify(result.ops[0]._id, undefined
+             , 2));
+    });
 
     db.close();
 
